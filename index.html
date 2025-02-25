@@ -8,17 +8,24 @@
 
         /* STYLE FOR THE INPUT FIELD */
         #charInput {
+            width: 10vw;
+            height: 4rem;
 
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
+            width: 10vw;
+            height: 5rem;
+            background-color: aquamarine;
+            border-radius: 3rem;
 
         }
 
         /* STYLE FOR THE IMAGE */
         #displayedImage {
             display: none; /* This line is mandatory */
+            width: 50vw;
         }
     </style>
 </head>
@@ -40,32 +47,32 @@
         // Array of images
         // DIRECTIONS: UPDATE THE URLS WITH THE RELATIVE LINKS OF YOUR IMAGES
         const images = [
-            "https://via.placeholder.com/300/00FF00/FFFFFF?text=A", //A
-            "https://via.placeholder.com/300/00FF00/FFFFFF?text=B", //B
-            "https://via.placeholder.com/300/0000FF/FFFFFF?text=C", //C
-            "https://via.placeholder.com/300/FFFF00/000000?text=D", //D
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=E", //E
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=F", //F
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=G", //G
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=H", //H
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=I", //I
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=J", //J
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=K", //K
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=L", //L
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=M", //M
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=N", //N
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=O", //O
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=P", //P
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Q", //Q
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=R", //R
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=S", //S
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=T", //T
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=U", //U
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=V", //V
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=W", //W
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=X", //X
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Y", //Y
-            "https://via.placeholder.com/300/FF00FF/FFFFFF?text=Z"  //Z
+            "images/apple.webp", //A
+            "images/banana.jpg", //B
+            "images/cherries.jpeg", //C
+            "images/durian.webp", //D
+            "images/elderberry.jpg", //E
+            "images/fig.jpg", //F
+            "images/grapes.webp", //G
+            "images/honeydew.png", //H
+            "images/imbe.jpeg", //I
+            "images/jackfruit.jpg", //J
+            "images/kiwi.jpg", //K
+            "images/lemon.jpg", //L
+            "images/mango.webp", //M
+            "images/nectarine.jpg", //N
+            "images/orange.webp", //O
+            "images/persimmon.jpg", //P
+            "images/quince.jpg", //Q
+            "images/raspberries.webp", //R
+            "images/starfruit.webp", //S
+            "images/tamarind.jpg", //T
+            "images/ugni.jpg", //U
+            "images/velvet apple.png", //V
+            "images/watermelon.avif", //W
+            "images/xonostle.jpg", //X
+            "images/yangmei.avif", //Y
+            "images/zwetschgen.webp"  //Z
         ];
 
         function displayImage() {
