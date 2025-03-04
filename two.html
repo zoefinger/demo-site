@@ -10,41 +10,55 @@
             font-size: 3rem;
             margin-top: 1vw;
             margin-left: 5vw;
+            padding:0cm;
+            background-color: rgb(60, 99, 44);
+            color:rgb(255, 246, 235);
         }
 
         p{
            margin-bottom: 0rem;
            padding-bottom: 0rem;
+           color:rgb(255, 246, 235);
         }
         
         /* STYLE FOR THE INPUT FIELD */
         #charInput1 {
-            height: 2rem;
+            height: 1.5rem;
             width: 3rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 2rem;
+            font-size: 1.3rem;
+            background-color: rgb(255, 246, 235);
+            border: 2px solid rgb(124, 174, 104);
         }
 
         #charInput2 {
-            height: 2rem;
+            height: 1.5rem;
             width: 3rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 2rem;
+            font-size: 1.3rem;
+            background-color: rgb(255, 246, 235);
+            border: 2px solid rgb(124, 174, 104);
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
         #submitButton {
-            height: 2rem;
+            height: 1.3rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.5rem;
-
+            border: 0rem;
+            background-color: rgb(60, 99, 44);
+            color:rgb(255, 246, 235);
+            transition: color .5s;
+        }
+        #submitButton:hover {
+            color: rgb(124, 174, 104);
         }
 
         /* STYLE FOR THE IMAGE */
         #displayedImage {
             display: none; /* This line is mandatory */
             width: 35vw;
-            margin-left: 50vw;
+            margin:auto;
         }
 
         #text_display{
@@ -54,13 +68,13 @@
 </head>
 <body>
 
-    <p>enter your initials <br> for an album</p>
+    <p>enter your initials for an album!</p>
     
     <!-- INPUT FIELD FOR 1 CHARACTER -->
     <input type="text" id="charInput1" maxlength="1">
     <input type="text" id="charInput2" maxlength="1">
     <!-- BUTTON TO DISPLAY IMAGE -->
-    <button onclick="displayImage()" id="submitButton">show me!</button>
+    <button onclick="displayImage()" id="submitButton">submit :)</button>
     <p id="text_display"></p>
     <!-- IMAGE TO DISPLAY -->
     <img id="displayedImage" src="" alt="Displayed Image">
@@ -87,25 +101,25 @@
             if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M" || input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M" || input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
                 imgElement.src = "music/the_returner.jpg"
                 imgElement.style.display = "block";
-                document.getElementById("text_display").innerHTML = "";
+                document.getElementById("text_display").innerHTML = "the returner -allison russell";
             }
             
             else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N" || input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N" || input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
                 imgElement.src = "music/wasteland_baby.jpg"
                 imgElement.style.display = "block";
-                document.getElementById("text_display").innerHTML = "";
+                document.getElementById("text_display").innerHTML = "wasteland, baby -hozier";
             }
 
             else if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M" || input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N" || input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
                 imgElement.src = "music/how_did_it_seem_to_you.jpg"
                 imgElement.style.display = "block";
-                document.getElementById("text_display").innerHTML = "";
+                document.getElementById("text_display").innerHTML = "how did it seem to you? -odie leigh";
             }
             
             else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N" || input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M" || input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
                 imgElement.src = "music/masterpiece.jpg"
                 imgElement.style.display = "block";
-                document.getElementById("text_display").innerHTML = "";
+                document.getElementById("text_display").innerHTML = "masterpiece -big theif";
             }
             else { //If input1_letter equals A AND input2_letter does not equal B, then show this image
                 document.getElementById("text_display").innerHTML = "<p>please enter two letters</p>";
