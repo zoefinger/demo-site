@@ -13,6 +13,7 @@
             padding:0cm;
             background-color: rgb(60, 99, 44);
             color:rgb(255, 246, 235);
+            transition: background-color .5s ease;
         }
 
         p{
@@ -28,7 +29,8 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.3rem;
             background-color: rgb(255, 246, 235);
-            border: 2px solid rgb(124, 174, 104);
+            border: 2px solid rgb(206, 192, 174);
+            
         }
 
         #charInput2 {
@@ -37,7 +39,7 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.3rem;
             background-color: rgb(255, 246, 235);
-            border: 2px solid rgb(124, 174, 104);
+            border: 2px solid rgb(206, 192, 174);
         }
 
         /* STYLE FOR THE SUBMIT BUTTON */
@@ -46,12 +48,12 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 1.5rem;
             border: 0rem;
-            background-color: rgb(60, 99, 44);
+            background-color: transparent;
             color:rgb(255, 246, 235);
-            transition: color .5s;
+            transition: opacity .5s;
         }
         #submitButton:hover {
-            color: rgb(124, 174, 104);
+            opacity: 60%;
         }
 
         /* STYLE FOR THE IMAGE */
@@ -106,37 +108,100 @@
             //Number
             const input1_number = input1_letter.charCodeAt(0); //Converts the letter to a number (https://www.ascii-code.com); For instance, 'A' is 65 in ASCII
             const input2_number = input2_letter.charCodeAt(0); //Converts the letter to a number (https://www.ascii-code.com); For instance, 'A' is 65 in ASCII
+           
+            function changeBackground(color) {
+            document.body.style.background = color;
+            document.body.style.background = color;
+            }
 
             //HINTS
             //HINT 1: You can compare strings with comparison operators and boolean operators
             //COMPARISON & LOGICAL OPERATORS: https://www.w3schools.com/js/js_comparisons.asp
-            if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M" || input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M" || input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
+            if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M")) { 
+                imgElement.src = "music/birdie.webp"
+                imgElement.style.display = "block";
+                document.body.style.background = "#616e44";
+                document.getElementById("text_display").innerHTML = "birdie -slaughter beach, dog";
+            } else if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M") && (input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
+                imgElement.src = "music/songs.jpg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#11385f";
+                document.getElementById("text_display").innerHTML = "songs -adrienne lenker";
+            } else if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N")) { 
+                imgElement.src = "music/youth_is_wasted.jpg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#ff6330";
+                document.getElementById("text_display").innerHTML = "youth is wasted -reeve carney";
+            } else if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M") && (input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
                 imgElement.src = "music/the_returner.jpg"
                 imgElement.style.display = "block";
+                document.body.style.background = "#00192a";
                 document.getElementById("text_display").innerHTML = "the returner -allison russell";
-            }
-            
-            else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N" || input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N" || input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
-                imgElement.src = "music/wasteland_baby.jpg"
+            } else if((input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M")) { 
+                imgElement.src = "music/carrier_pigeon.jpg"
                 imgElement.style.display = "block";
-                document.getElementById("text_display").innerHTML = "wasteland, baby -hozier";
-            }
-
-            else if((input1_letter === "A" || input1_letter === "C" ||input1_letter === "E" || input1_letter === "G" || input1_letter === "I" ||input1_letter === "K" || input1_letter === "M" || input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N" || input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
-                imgElement.src = "music/how_did_it_seem_to_you.jpg"
+                document.body.style.background = "#f68713";
+                document.getElementById("text_display").innerHTML = "carrier pigeon -odie leigh";
+            } else if((input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
+                imgElement.src = "music/foxlore.jpg"
                 imgElement.style.display = "block";
-                document.getElementById("text_display").innerHTML = "how did it seem to you? -odie leigh";
-            }
-            
-            else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N" || input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M" || input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
+                document.body.style.background = "#4e585a";
+                document.getElementById("text_display").innerHTML = "foxlore -the crane wives";
+            } else if((input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N")) { 
+                imgElement.src = "music/hozier_self_titled.jpeg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#9f431e";
+                document.getElementById("text_display").innerHTML = "hozier (self titled) -hozier";
+            } else if((input1_letter === "O" || input1_letter === "Q" || input1_letter === "S" || input1_letter === "U" || input1_letter === "W" || input1_letter === "Y") && (input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
+                imgElement.src = "music/punisher.jpg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#101522";
+                document.getElementById("text_display").innerHTML = "punisher -phoebe bridgers";
+            } else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M")) { 
+                imgElement.src = "music/stick_season.jpeg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#575c3c";
+                document.getElementById("text_display").innerHTML = "stick season -noah kahan";
+            } else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N") && (input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
                 imgElement.src = "music/masterpiece.jpg"
                 imgElement.style.display = "block";
+                document.body.style.background = "#3b365b";
                 document.getElementById("text_display").innerHTML = "masterpiece -big theif";
-            }
-            else { //If input1_letter equals A AND input2_letter does not equal B, then show this image
+            } else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N")) { 
+                imgElement.src = "music/the_land_is_inhospitable_and_so_are_we.png"
+                imgElement.style.display = "block";
+                document.body.style.background = "#ff9a42";
+                document.getElementById("text_display").innerHTML = "the land is inhospitable and so are we -mitski";
+            } else if((input1_letter === "B" || input1_letter === "D" ||input1_letter === "F" || input1_letter === "H" || input1_letter === "J" ||input1_letter === "L" || input1_letter === "N") && (input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
+                imgElement.src = "music/the_record.webp"
+                imgElement.style.display = "block";
+                document.body.style.background = "#192c31";
+                document.getElementById("text_display").innerHTML = "the record -boygenius";
+            } else if((input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "A" || input2_letter === "C" ||input2_letter === "E" || input2_letter === "G" || input2_letter === "I" ||input2_letter === "K" || input2_letter === "M")) { 
+                imgElement.src = "music/coyote_stories.jpg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#333238";
+                document.getElementById("text_display").innerHTML = "coyote stories -the crane wives";
+            } else if((input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "O" || input2_letter === "Q" || input2_letter === "S" || input2_letter === "U" || input2_letter === "W" || input2_letter === "Y")) { 
+                imgElement.src = "music/young_man_in_america.jpg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#5a7580";
+                document.getElementById("text_display").innerHTML = "young man in america -anaïs mitchell";
+            } else if((input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "B" || input2_letter === "D" ||input2_letter === "F" || input2_letter === "H" || input2_letter === "J" ||input2_letter === "L" || input2_letter === "N")) { 
+                imgElement.src = "music/unreal_unearth.jpg"
+                imgElement.style.display = "block";
+                document.body.style.background = "#1b2915";
+                document.getElementById("text_display").innerHTML = "unreal unearth -hozier";
+            } else if((input1_letter === "P" || input1_letter === "R" || input1_letter === "T" || input1_letter === "V" || input1_letter === "X" || input1_letter === "Z") && (input2_letter === "P" || input2_letter === "R" || input2_letter === "T" || input2_letter === "V" || input2_letter === "X" || input2_letter === "Z")) { 
+                imgElement.src = "music/dragon_new_warm_mountain_i_believe_in_you.png"
+                imgElement.style.display = "block";
+                document.body.style.background = "#c3bdb2";
+                document.getElementById("text_display").innerHTML = "dragon new warm mountain i believe in you -big thief";
+            } else { //If input1_letter equals A AND input2_letter does not equal B, then show this image
                 document.getElementById("text_display").innerHTML = "<p>please enter two letters</p>";
                 imgElement.src = "music/blank.png"
                 imgElement.style.display = "block";
+                document.body.style.background = "rgb(60, 99, 44)";
                 
             }
         }
