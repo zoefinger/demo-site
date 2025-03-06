@@ -10,6 +10,7 @@
             font-size: 3rem;
             margin-top: 1vw;
             margin-left: 5vw;
+            margin-right: 5vw;
             padding:0cm;
             background-color: rgb(60, 99, 44);
             color:rgb(255, 246, 235);
@@ -54,11 +55,12 @@
             padding-right: .8rem;
             background-color: rgb(255, 246, 235,.3);
             color:rgb(255, 246, 235);
-            transition: opacity .5s, font-size .5s;
+            transition: opacity .5s, font-size .5s, background-color .5s;
         }
         #submitButton:hover {
             opacity: 60%;
             font-size: 2rem;
+            background-color: rgb(255, 246, 235,.1);
         }
 
         /* STYLE FOR THE IMAGE */
@@ -66,16 +68,23 @@
             display: none; /* This line is mandatory */
             width: 35vw;
             margin:auto;
+            padding-top:0rem;
+            margin-top: 0rem;
         }
 
+        /* style for album label */
         #text_display{
-            font-size: 1rem;
+            font-size: 1.1rem;
+            padding: 0rem;
+            margin-bottom: 0rem;
         }
+        
         @media screen and (max-width: 1024px) {
             #displayedImage {
             width: 50vw;
             padding-top: 2rem;
         }
+        
         }
         @media screen and (max-width: 840px) {
             #displayedImage {
@@ -85,6 +94,10 @@
 
             #text_display{
             font-size: 1.25rem;
+        }
+        #submitButton:hover {
+            opacity: 60%;
+            font-size: 2rem;
         }
     }
     </style>
